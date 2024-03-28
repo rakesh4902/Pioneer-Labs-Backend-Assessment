@@ -17,6 +17,7 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 4. **Run the Task**: Once the dependencies are installed, start the server using the following command:
 
     ```bash
+    cd <project-directory>(task1)
     nodemon app.js
     ```
 
@@ -74,6 +75,7 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 
 You can access all API requests in the app.http file.
 
+
 # Swagger API Documentation Usage
 
 The Swagger API documentation provides a comprehensive guide to interact with the User Authentication APIs. Follow these steps to effectively use the Swagger documentation:
@@ -121,5 +123,106 @@ Replace `{running_port_no}` with the port number where your server is running (e
 
 1. If you encounter any errors or unexpected behavior, refer to the Swagger documentation for endpoint descriptions and error responses.
 2. Ensure that you provide valid input data and follow the specified request formats.
+
+### Task 2: Public APIs with Filtering
+
+#### Retrieve Public APIs
+
+- **URL**: `GET http://localhost:{running_port_no(ex:3000 or 3001}/api/publicapis`
+- **Description**: Retrieve public APIs with optional filtering based on category and limit.
+- **Parameters**:
+    - `category`: Filter APIs by category (case-insensitive).
+    - `limit`: Limit the number of results.
+- **Responses**:
+    - `200`: A list of public APIs matching the filter criteria.
+    - `400`: Bad request, typically due to an invalid limit parameter.
+    - `500`: Internal server error.
+
+#### Sample API Request
+
+```http
+GET http://localhost:{running_port_no(ex:3000 or 3001}/api/publicapis?category=Animals&limit=5
+
+```
+
+This is a sample API request to retrieve public APIs filtered by the "Animals" category with a limit of 5 results. To execute this request:
+
+1. Open the Swagger UI interface at `http://localhost:{running_port_no(ex:3000 or 3001}/api-docs/`.
+2. Find the endpoint labeled "Retrieve Public APIs with Optional Filtering" under the "Public APIs" tag.
+3. Click on the endpoint to expand it and view the details.
+4. Click on the "Try it out" button.
+5. Enter "Animals" in the "category" field and "5" in the "limit" field.
+6. Click the "Execute" button to send the request to the server.
+7. View the response below to see the filtered public APIs.
+
+You can access all API requests in the app.http file.
+
+### Task 4: Retrieve Data for Authenticated Users
+
+
+
+#### 1. Log In as a User
+
+- **URL**: `POST http://localhost:3000/login`
+- **Description**: Log in as a user with the provided username and password.
+- **Request Body**:
+    ```json
+    {
+        "username": "your_username",
+        "password": "your_password"
+    }
+    ```
+- **Response**:
+  - **200 OK**: User logged in successfully
+    ```json
+    {
+        "token": "your_generated_jwt_token"
+    }
+    ```
+  - **401 Unauthorized**: Invalid username or password
+
+### Access Authenticated Data
+
+Once logged in as a user, follow these steps to access authenticated data:
+
+1. Click on the "Authorize" button on the top right corner of the Swagger UI.
+2. Enter the JWT token obtained after successful login and click "Authorize".
+3. Navigate to the `/api/data` endpoint in the Swagger UI.
+4. Click on the "Try it out" button.
+5. Execute the request to retrieve authenticated user data.
+6. View the response to see the results returned by the server.
+
+### Swagger Documentation
+
+The API is documented using Swagger. You can access the Swagger UI interface to explore the API endpoints and interact with them. Follow these steps:
+
+1. Open your web browser and navigate to [http://localhost:3000/api-docs/](http://localhost:3000/api-docs/).
+2. Use the Swagger UI interface to view the available endpoints, their descriptions, request/response formats, and security requirements.
+3. Click on each endpoint to expand it and view detailed documentation.
+4. Click on the "Authorize" button on the top right corner of the Swagger UI.
+5. Enter the JWT token obtained after successful login and click "Authorize".
+6. Interact with the endpoints by clicking the "Try it out" button and providing the required input parameters.
+7. View the responses to see the results returned by the server.
+
+
+#### 2. Retrieve Data
+- **URL**: `GET http://localhost:3000/api/data`
+- **Description**: Retrieve some data for authenticated users.
+- **Security**: Bearer Token (JWT obtained after successful login)
+- **Response**:
+  - **200 OK**: Successful operation
+    ```json
+    {
+        "message": "Authenticated user data",
+        "user": {
+            "username": "example_user"
+        }
+    }
+    ```
+
+You can access all API requests in the app.http file.
+
+
+
 
 
