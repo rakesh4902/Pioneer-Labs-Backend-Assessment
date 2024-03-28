@@ -1,0 +1,27 @@
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+    "username": "rakesh",
+    "email": "modir810@gmail.com",
+    "password": "rakesh123"
+}
+
+####
+POST http://localhost:3001/login 
+Content-Type: application/json
+
+{
+    "username":"rakesh",
+    "password":"rakesh123"
+}
+
+###
+GET http://localhost:3001/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByZW0iLCJpYXQiOjE3MTE1NDIyNDV9.2GU5AjxmX_NMudleKbO4YAgiOCZGTzLtYywR23eB5HA
+
+###
+POST http://localhost:3001/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJha2VzaCIsImlhdCI6MTcxMTUzMzE0Nn0.z_vs1PAfYwbhhSUq8qpxeCgHpGKA-xO-ws6ScqUQcVk
+

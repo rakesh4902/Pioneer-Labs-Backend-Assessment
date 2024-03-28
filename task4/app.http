@@ -1,0 +1,12 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "rakesh",
+    "password": "rakesh123"
+}
+
+
+###
+GET http://localhost:3000/api/data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJha2VzaCIsImlhdCI6MTcxMTUzODIyN30.W1WPEjwNObYDYKxZ0MIHCxOYTvkhD_g8685W_XM_j4Q
