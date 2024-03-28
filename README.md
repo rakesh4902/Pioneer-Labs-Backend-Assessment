@@ -28,7 +28,7 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 
 #### Register a New User
 
-- **URL**: `POST http://localhost:3001/register`
+- **URL**: `POST http://localhost:{running_port_no(ex:3000 or 3001}/register`
 - **Content-Type**: application/json
 - **Body**:
   
@@ -44,7 +44,7 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 
 #### Login as a User
 
-- **URL**: `POST http://localhost:3001/login`
+- **URL**: `POST http://localhost:{running_port_no(ex:3000 or 3001}/login`
 - **Content-Type**: application/json
 - **Body**:
 
@@ -59,19 +59,20 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 
 #### Get User Profile
 
-- **URL**: `GET http://localhost:3001/profile`
+- **URL**: `GET http://localhost:{running_port_no(ex:3000 or 3001}/profile`
 - **Authorization**: Bearer Token (JWT obtained after successful login)
 
     Get the profile information of the authenticated user.
 
 #### Log Out
 
-- **URL**: `POST http://localhost:3001/logout`
+- **URL**: `POST http://localhost:{running_port_no(ex:3000 or 3001}/logout`
 - **Authorization**: Bearer Token (JWT obtained after successful login)
 
     Log out the authenticated user.
 
 
+You can access all API requests in the app.http file.
 
 # Swagger API Documentation Usage
 
@@ -79,8 +80,9 @@ The Swagger API documentation provides a comprehensive guide to interact with th
 
 ## Access Swagger UI
 
-1. Open your web browser and navigate to the following URL: http://localhost:3001/api-docs/
-This URL will display the Swagger UI interface containing all available API endpoints and their descriptions.
+1. Open your web browser and navigate to the following URL: http://localhost:{running_port_no}/api-docs/
+
+Replace `{running_port_no}` with the port number where your server is running (e.g., 3000 or 3001). This URL will display the Swagger UI interface containing all available API endpoints and their descriptions.
 
 ## Explore Endpoints
 
@@ -120,6 +122,4 @@ This URL will display the Swagger UI interface containing all available API endp
 1. If you encounter any errors or unexpected behavior, refer to the Swagger documentation for endpoint descriptions and error responses.
 2. Ensure that you provide valid input data and follow the specified request formats.
 
-
----
 
