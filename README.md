@@ -25,7 +25,7 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 
 ## Task Documentation
 
-### Task 1: User Authentication APIs
+## Task 1: User Authentication APIs
 
 #### Register a New User
 
@@ -124,7 +124,7 @@ Replace `{running_port_no}` with the port number where your server is running (e
 1. If you encounter any errors or unexpected behavior, refer to the Swagger documentation for endpoint descriptions and error responses.
 2. Ensure that you provide valid input data and follow the specified request formats.
 
-### Task 2: Public APIs with Filtering
+## Task 2: Public APIs with Filtering
 
 #### Retrieve Public APIs
 
@@ -157,7 +157,7 @@ This is a sample API request to retrieve public APIs filtered by the "Animals" c
 
 You can access all API requests in the app.http file.
 
-### Task 4: Retrieve Data for Authenticated Users
+## Task 4: Retrieve Data for Authenticated Users
 
 
 
@@ -221,6 +221,48 @@ The API is documented using Swagger. You can access the Swagger UI interface to 
     ```
 
 You can access all API requests in the app.http file.
+
+## Task 5: Ethereum Account Balance API
+
+#### Get Ethereum Account Balance
+
+- **Endpoint**: `GET /balance/{address}`
+- **Description**: Retrieve the balance of the specified Ethereum account.
+- **Parameters**:
+  - `address`: Ethereum address to get the balance for.
+- **Responses**:
+  - **200 OK**: Successful response with Ethereum account balance.
+    ```json
+    {
+        "address": "ethereum_address",
+        "balance": "account_balance_in_ether"
+    }
+    ```
+  - **400 Bad Request**: Invalid Ethereum address.
+  - **500 Internal Server Error**: Internal server error.
+
+### Swagger Documentation
+
+The API is documented using Swagger. You can access the Swagger UI interface to explore the API endpoints and interact with them. Follow these steps:
+
+1. Open your web browser and navigate to [http://localhost:3000/api-docs/](http://localhost:3000/api-docs/).
+2. Use the Swagger UI interface to view the available endpoints, their descriptions, request/response formats, and parameters.
+3. Click on each endpoint to expand it and view detailed documentation.
+4. Execute requests by clicking the "Try it out" button and providing the required parameters.
+5. View the responses to see the results returned by the server.
+
+### Sample Ethereum Addresses
+
+Here are some sample Ethereum addresses to check balances:
+
+1. 0x388C818CA8B9251b393131C08a736A67ccB19297
+2. 0x848D30F307f02F1Ca92b71Be8BF5B28256F8d9bE
+3. 0x72d38F294aeDBfbF8F2ae7fb98a4e78079948526
+
+For more Ethereum addresses, you can visit [Ethplorer](https://ethplorer.io/address/0xd76b5c2a23ef78368d8e34288b5b65d616b746ae#pageTab=transfers).
+
+You can access all API requests in the app.http file.
+
 
 
 
