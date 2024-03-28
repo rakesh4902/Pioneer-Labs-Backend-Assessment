@@ -4,22 +4,22 @@
 
 This repository contains implementations for four tasks, each accompanied by Swagger documentation. Task 3 refers to the Swagger documentation for all tasks. Below is a brief overview of each task:
 
-## Task 1: Implement User Authentication with JWT
+### Task 1: Implement User Authentication with JWT
 - Develops user authentication functionality using JSON Web Tokens (JWT).
 - Includes endpoints for user registration, login, and logout.
 - Secures sensitive routes by requiring authentication.
 
-## Task 2: Create API Endpoints for Data Retrieval
+### Task 2: Create API Endpoints for Data Retrieval
 - Implements API endpoints to fetch data from a public API with filtering options.
 - Utilizes Node.js and Express.js to create API routes.
 - Provides filtering options based on categories and result limits.
 
-## Task 4: Secure API Endpoint for Authenticated Users Only
+### Task 4: Secure API Endpoint for Authenticated Users Only
 - Restricts access to an API endpoint to authenticated users only.
 - Implements middleware to verify JWT authentication before allowing access.
 - Returns an error message for unauthenticated requests.
 
-## Task 5: Retrieve Ethereum Account Balance with web3.js (Optional)
+### Task 5: Retrieve Ethereum Account Balance with web3.js (Optional)
 - Fetches the balance of an Ethereum account using web3.js library.
 - Implements a route to retrieve the balance of a specified Ethereum account.
 - Handles errors and edge cases gracefully.
