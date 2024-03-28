@@ -75,6 +75,10 @@ This repository contains the backend assessment tasks for Pioneer Labs. Below yo
 
 You can access all API requests in the app.http file.
 
+### Swagger Documentation Output for Task 1
+![image](https://github.com/rakesh4902/Pioneer-Labs-Backend-Assessment/assets/83058036/23029395-a7e5-431e-a81d-090fb5186245)
+
+
 
 # Swagger API Documentation Usage
 
@@ -157,6 +161,9 @@ This is a sample API request to retrieve public APIs filtered by the "Animals" c
 
 You can access all API requests in the app.http file.
 
+### Swagger Documentation Output for Task 2
+![image](https://github.com/rakesh4902/Pioneer-Labs-Backend-Assessment/assets/83058036/41ad6bce-fa60-47af-8cf5-353da764692b)
+
 ## Task 4: Retrieve Data for Authenticated Users
 
 
@@ -219,6 +226,8 @@ The API is documented using Swagger. You can access the Swagger UI interface to 
         }
     }
     ```
+### Swagger Documentation Output for Task 4
+![image](https://github.com/rakesh4902/Pioneer-Labs-Backend-Assessment/assets/83058036/4753a470-590f-4c84-9249-719dccbade28)
 
 You can access all API requests in the app.http file.
 
@@ -240,6 +249,8 @@ You can access all API requests in the app.http file.
     ```
   - **400 Bad Request**: Invalid Ethereum address.
   - **500 Internal Server Error**: Internal server error.
+- sample request
+- ** URL ** :`GET http://localhost:3000/balance/0x72d38F294aeDBfbF8F2ae7fb98a4e78079948526`
 
 ### Swagger Documentation
 
@@ -260,6 +271,9 @@ Here are some sample Ethereum addresses to check balances:
 3. 0x72d38F294aeDBfbF8F2ae7fb98a4e78079948526
 
 For more Ethereum addresses, you can visit [Ethplorer](https://ethplorer.io/address/0xd76b5c2a23ef78368d8e34288b5b65d616b746ae#pageTab=transfers).
+
+### Swagger Documentation Output for Task 5
+![image](https://github.com/rakesh4902/Pioneer-Labs-Backend-Assessment/assets/83058036/8f0d3883-ef20-42e3-a86e-c3275af16100)
 
 You can access all API requests in the app.http file.
 
